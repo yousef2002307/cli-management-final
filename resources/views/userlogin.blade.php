@@ -35,7 +35,7 @@ left: 0px;" href="{{url("/")}}">back</a>
       <div class="form-content">
         <div class="login-form">
           <div class="title">Login as user</div>
-          <form action="{{route('user-login2.post')}}" class="login" method="POST">
+          <form action="{{secure_url(route('user-login2.post'))}}" class="login" method="POST">
             @csrf
             @method("post")
             <div class="input-boxes">
@@ -61,7 +61,7 @@ left: 0px;" href="{{url("/")}}">back</a>
         <div class="signup-form">
           <div class="title">Create profile</div>
         
-          <form action="{{route('user-login.post')}}" method="POST" enctype="multipart/form-data">
+          <form action="{{secure_url(route('user-login.post'))}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method("post")
             <div class="input-boxes">
