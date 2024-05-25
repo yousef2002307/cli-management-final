@@ -261,7 +261,7 @@ setInterval(() => {
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chatcount')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chatcount')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
@@ -394,7 +394,7 @@ $.ajaxSetup({
       ///////////////////
       $.ajax({
         method: "post",
-        url: "{{url('/reshome2')}}" , // that is blade function to go to specific route
+        url: "{{secure_url('/reshome2')}}" , // that is blade function to go to specific route
 //or you can pass a parameter to url func like this
 //  url: `{{url('/test2/${userid}')}}`
 
