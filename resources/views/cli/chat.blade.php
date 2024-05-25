@@ -53,7 +53,7 @@ var scroll = false;
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chatinsert')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chatinsert')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
@@ -130,7 +130,7 @@ setInterval(() => {
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chat')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chat')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
@@ -183,7 +183,7 @@ setInterval(() => {
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chat')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chat')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
@@ -240,7 +240,7 @@ setInterval(() => {
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chatupdate')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chatupdate')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
