@@ -55,7 +55,7 @@ var scroll = false
                method: "post",
                url: "{{url('/chatinsert')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
-       //  url: `{{url('/test2/${userid}')}}`
+       //  url: `{{secure_url('/test2/${userid}')}}`
        
                data : {val:1,message}, //the data you sed to index method
                success: function (response) {
@@ -112,7 +112,7 @@ var scroll = false
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chat')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chat')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
@@ -169,7 +169,7 @@ var scroll = false
              ///////////////////
              $.ajax({
                method: "post",
-               url: "{{url('/chat')}}" , // that is blade function to go to specific route
+               url: "{{secure_url('/chat')}}" , // that is blade function to go to specific route
        //or you can pass a parameter to url func like this
        //  url: `{{url('/test2/${userid}')}}`
        
