@@ -262,7 +262,7 @@ let notify =false;
       ///////////////////
       $.ajax({
         method: "post",
-        url: "{{url('/notifycount')}}" , // that is blade function to go to specific route
+        url: "{{secure_url('/notifycount')}}" , // that is blade function to go to specific route
 //or you can pass a parameter to url func like this
 //  url: `{{url('/test2/${userid}')}}`
 
@@ -310,7 +310,7 @@ const pageNumber = getPageNumberFromUrl(url);
       ///////////////////
       $.ajax({
         method: "post",
-        url: "{{url('/usersearch')}}" , // that is blade function to go to specific route
+        url: "{{secure_url('/usersearch')}}" , // that is blade function to go to specific route
 //or you can pass a parameter to url func like this
 //  url: `{{url('/test2/${userid}')}}`
 
