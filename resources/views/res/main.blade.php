@@ -58,7 +58,7 @@ $.ajaxSetup({
       $.ajax({
         method: "post",
         cache: true,
-        url: "{{url('/reshome2')}}" , // that is blade function to go to specific route
+        url: "{{secure_url('/reshome2')}}" , // that is blade function to go to specific route
 //or you can pass a parameter to url func like this
 //  url: `{{url('/test2/${userid}')}}`
 
@@ -78,8 +78,8 @@ $.ajaxSetup({
      //  if(response.result != "neu"){
           
         
-            let url = "{{ url('/') }}/endofqueue/" + response.result[0].id + "/"+response.result[0].patients.id;
-            let url2 = "{{ url('/') }}/appedit/" + response.result[0].id ;
+            let url = "{{ secure_url('/') }}/endofqueue/" + response.result[0].id + "/"+response.result[0].patients.id;
+            let url2 = "{{ secure_url('/') }}/appedit/" + response.result[0].id ;
             let srcjo = response.result[0].patients.image == 'x' ? "{{asset('images/pic-1.jpg')}}" : "{{asset('images/')}}/"+  response.result[0].patients.image 
             document.querySelector('.sch-res').innerHTML = ``
             document.querySelector('.sch-res').innerHTML +=`
@@ -116,7 +116,7 @@ if(response.result[0].active){
   </div>
  
 </section>
-<form method="POST" action="{{url('/delayall')}}">
+<form method="POST" action="{{secure_url('/delayall')}}">
 @csrf
 @method('post')
 <button type="submit" class="${response.result[0].active == 0 ? "" : 'd-none'}">delay all apoiments to another day</button>
@@ -134,7 +134,7 @@ if(response.result[0].active){
   </div>
  
 </section>
-<form class='form221' method="POST" action="{{url('/delayall')}}">
+<form class='form221' method="POST" action="{{secure_url('/delayall')}}">
 @csrf
 @method('post')
 <button class="exa hvr-bounce-to-right theme_btn_two " type="submit">delay all apoiments to another day(guest appoiments not included)</button>
