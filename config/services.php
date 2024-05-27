@@ -35,7 +35,7 @@ return [
     'google' => [
         'client_id' => '297089882362-pik1seb5assn3r8cnkfa3i9802t5e65f.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://127.0.0.1:8000/auth/google/callback',
+        'redirect' => 'https://cli-management-final-production.up.railway.app/auth/google/callback',
     ],
     
 
