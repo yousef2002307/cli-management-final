@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body.antialiased{
     background-color: blueviolet;
     position: relative;
@@ -26,60 +27,19 @@ body.antialiased .home{
 body.antialiased .home .overlay{
     background-color: blueviolet;
     z-index: 1;
-    height: 50px;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 50px;
-    border-radius: 50%;
+    width: 100%;
+
     backface-visibility: hidden;
     transform-origin: right;
-      transform: scale(0);
-      
-    animation: identifier4 .5s linear   ;
-    animation-fill-mode: forwards;
-    -moz-animation: identifier4 .5s linear; /* Firefox prefix */
-    -moz-animation-fill-mode: forwards; /* Firefox prefix */
+     
    
 }
 
-@keyframes identifier4 {
-    0%{
-        transform: scale(0);
-    }
-    10%{
-        transform: scale(500);
-    }
-    20%{
-        transform: scale(1000);
-    }
-    30%{
-        transform: scale(1500);
-    }
-    40%{
-        transform: scale(2000);
-    }
-    50%{
-        transform: scale(2500);
-    }
-    60%{
-        transform: scale(3000);
-    }
-    70%{
-        transform: scale(3500);
-    }
-  
-    80%{
-        transform: scale(4000);
-    }
-    90%{
-        transform: scale(4500);
-    }
-    100%{
-        transform: scale(10000);
-    }
 
-}
 nav.j-home{
     display: flex;
     width: 50%;
@@ -95,41 +55,21 @@ nav.j-home ul li a:link{
 }
 nav.j-home ul{
     position: relative;
-    right: -118%;
-    backface-visibility: hidden;
-    animation: identifier3 .5s linear 2s  ;
-    animation-fill-mode: forwards;
+  
 }
-@keyframes identifier3 {
-    0%{
-       right: -70%;
-    }
-    25%{
-        right: -50%;
-    }
-    50%{
-        right: -10%;
-    }
-    75%{
-        right: 6%;
-    }
-    100%{
-        right: 0%;
-    }
 
-}
 nav.j-home ul li{
    
 
     display: inline-block;
     padding: 0 27px;
     background-color: rgb(21, 40, 24);
-    height: 35px;
-    line-height: 35px;
+    height: 10px;
+    line-height: 10px;
     display: flex-inline;
     display: inline-flex;
-    margin-top: 20px;
-    margin-right: 18px;
+    margin-top: 10px;
+    margin-right: 3px;
     cursor: pointer;
     transition: all .1s linear;
 }
@@ -139,32 +79,15 @@ nav.j-home ul li:hover{
 }
 div.j-buttons{
     position: absolute;
-    top: -20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
    z-index: 3;
-    animation: identifier2 1s linear 1s  ;
-    animation-fill-mode: forwards;
-    backface-visibility: hidden;
+   display: inline-block;
+   margin-bottom: 44px;
+    
 }
-@keyframes identifier2 {
-    0%{
-        top: -15%;
-    }
-    25%{
-        top: 15%;
-    }
-    50%{
-        top: 30%;
-    }
-    75%{
-        top: 60%;
-    }
-    100%{
-        top: 50%;
-    }
 
-}
 div.j-buttons button:first-of-type{
     background-color: #fff;
     padding: 10px 17px;
@@ -181,6 +104,170 @@ div.j-buttons button:first-of-type a:link,
 div.j-buttons button:first-of-type a:visited{
     color: #000;
     text-decoration: none;
+}
+@media (min-width:900px) {
+    body.antialiased{
+        background-color: blueviolet;
+        position: relative;
+        display: block;
+        min-height: 100vh;
+        overflow-x: hidden;
+     backface-visibility: hidden;
+    }
+    body.antialiased:has(.home){
+        background-color: transparent;
+    }
+    body.antialiased .home{
+        background-color: transparent;
+        position: relative;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    body.antialiased .home .overlay{
+        background-color: blueviolet;
+        z-index: 1;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50px;
+        border-radius: 50%;
+        backface-visibility: hidden;
+        transform-origin: right;
+          transform: scale(0);
+          
+        animation: identifier4 .5s linear   ;
+        animation-fill-mode: forwards;
+        -moz-animation: identifier4 .5s linear; /* Firefox prefix */
+        -moz-animation-fill-mode: forwards; /* Firefox prefix */
+       
+    }
+    
+    @keyframes identifier4 {
+        0%{
+            transform: scale(0);
+        }
+        10%{
+            transform: scale(500);
+        }
+        20%{
+            transform: scale(1000);
+        }
+        30%{
+            transform: scale(1500);
+        }
+        40%{
+            transform: scale(2000);
+        }
+        50%{
+            transform: scale(2500);
+        }
+        60%{
+            transform: scale(3000);
+        }
+        70%{
+            transform: scale(3500);
+        }
+      
+        80%{
+            transform: scale(4000);
+        }
+        90%{
+            transform: scale(4500);
+        }
+        100%{
+            transform: scale(10000);
+        }
+    
+    }
+    nav.j-home{
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+    nav.j-home ul li a:visited,
+    nav.j-home ul li a:link{
+        color: #fff;
+        text-decoration: none;
+    }
+    nav.j-home ul{
+        position: relative;
+        right: -118%;
+        backface-visibility: hidden;
+        animation: identifier3 .5s linear 2s  ;
+        animation-fill-mode: forwards;
+    }
+    @keyframes identifier3 {
+        0%{
+           right: -70%;
+        }
+        25%{
+            right: -50%;
+        }
+        50%{
+            right: -10%;
+        }
+        75%{
+            right: 6%;
+        }
+        100%{
+            right: 0%;
+        }
+    
+    }
+    nav.j-home ul li{
+       
+    
+        display: inline-block;
+        padding: 0 27px;
+        background-color: rgb(21, 40, 24);
+        height: 35px;
+        line-height: 35px;
+        display: flex-inline;
+        display: inline-flex;
+        margin-top: 20px;
+        margin-right: 18px;
+        cursor: pointer;
+        transition: all .1s linear;
+    }
+    nav.j-home ul li:hover{
+        transform: translateY(3px);
+        background-color: rgb(28, 60, 33);
+    }
+    div.j-buttons{
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       z-index: 3;
+        animation: identifier2 1s linear 1s  ;
+        animation-fill-mode: forwards;
+        backface-visibility: hidden;
+    }
+    @keyframes identifier2 {
+        0%{
+            top: -15%;
+        }
+        25%{
+            top: 15%;
+        }
+        50%{
+            top: 30%;
+        }
+        75%{
+            top: 60%;
+        }
+        100%{
+            top: 50%;
+        }
+    
+    }
 }
 div.j-buttons button:last-of-type{
     background-color: #222;
